@@ -1,0 +1,7 @@
+{%extends 'base.html'%}
+{%block content%}
+<div>
+    <h2>razorpay</h2>
+    <a href="{%url 'Razorpay:payment' order.order_id%}">pay</a>
+</div>
+{%endblock%}

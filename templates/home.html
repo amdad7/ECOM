@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="welcome">
+</div>
+<div id="products" >
+    {% for i in products %}
+        <div style="width: 25%;display: inline;float: left;"">
+            <img src="{{i.thumbnail}}">
+            <a href="{% url 'core:product_view' i.product_id %}">{{i.product_name}}</a>
+            <p>{{i.product_brand}}</p>
+            <button onclick="loaddoc()"><img src="static/images/cart.png"></button>
+        </div>
+    {% endfor %}    
+</div>
+{% endblock %}

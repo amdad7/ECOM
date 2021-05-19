@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head><title>loginto ECOM</title></head>
+    <body>
+        <div id="form">
+            <form method="POST" action="{% url 'accounts:login' %}">
+                {% csrf_token %}
+                <input name="email" placeholder="email">
+                <input name="password" placeholder="password">
+                <button type="submit">login</button>
+            </form>
+        </div>
+    </body>
+</html>

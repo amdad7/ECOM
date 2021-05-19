@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+{% block content %}
+<h2>manage products</h2>
+
+<div>
+    <a href="{%url 'management:add_view' %}">add products</a>
+    <a href="{%url 'management:edit_view' %}">edit products</a>
+</div>
+{%endblock%}

@@ -1,0 +1,11 @@
+{%extends 'base.html' %}
+{%block content%}
+{%for i in cart.items.all%}
+    <div>
+        <h2>{{i.product.product_name}}</h2>
+        <p>{{i.quantity}}</p>
+    </div>
+{%endfor%}
+<p>total pric=>{{cart.total_price}}</p>
+<div><a href="{%url 'core:buy_view' cart.cart_id%}">buy</a></div>
+{%endblock%}

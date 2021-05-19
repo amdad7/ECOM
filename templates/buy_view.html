@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+{%block content%}
+<H2>checkout</H2>
+{%for i in cart.items.all%}
+    <div>
+        <h2>{{i.product.product_name}}</h2>
+        <p>{{i.quantity}}</p>
+    </div>
+{%endfor%}
+<h3>total={{cart.total_price}}</h3>
+<div>
+    <form method="POST" enctype="multipart/form-data" action="{%url 'core:buy' cart.cart_id%}">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">buy</button>    
+
+    </form>
+</div>
+{%endblock%}

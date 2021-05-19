@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+{%block content%}
+<div>
+    <p>product name:: {{product.product_name}}</p>
+    <p>product type:: {{product.product_type}}</p>
+    <p>product brand::{{product.product_brand}}</p>
+    <p>product description::{{product.product_description}}</p>
+    <h3>fill in data to edit</h3>
+   
+    <form method="POST" action="{% url 'management:edit' product.product_id %}" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit">edit product</button>
+    </form>   
+</div>
+{%endblock%}

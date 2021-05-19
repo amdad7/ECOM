@@ -1,0 +1,17 @@
+
+<div>
+    <span>
+        <h1>ECOM</h1>
+        <h2>{{status}}</h2>
+    </span>
+    {% if not status %}
+        <div style="float: right;">
+            <a href="{% url 'core:login_view' %}">login</a>
+            <a href="">sighn up</a>    
+        <div>
+    {% else %}
+            <h2>welcome {{user.username}}</h2>
+            <a href="{%url 'core:cart' %}">your cart</a>
+    {% endif %}
+              
+</div>

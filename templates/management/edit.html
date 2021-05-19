@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+{%block content%}
+<div>
+    <h3>select products to edit</h3>
+    
+    {%for product in products%}
+        <div>
+            <img src="{{product.thumbnail}}">
+            <a href="{%url 'management:edit_product' product.product_id%}">{{product.product_name}}</a>
+            <p>{{product.product_brand}}</p>
+        </div>
+    {%endfor%}       
+</div>
+{%endblock%}

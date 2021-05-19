@@ -1,0 +1,12 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ECOM</title>        
+    </head>
+    <body>
+        <div id='header'>{% include 'includes/header.html'%}</div>
+        <div id='content'>{% block content %} {% endblock %}</div>
+        <div id='footer'>{% include 'includes/footer.html'%}</div>
+    </body>
+</html>
